@@ -1,0 +1,386 @@
+@font-face {
+  font-family: "Redcollar";
+  src: url("fonts/Redcollar.woff2"), url("fonts/Redcollar.woff");
+}
+
+@font-face {
+  font-family: "TT Commons";
+  src: url("fonts/TTCommons-Regular.woff");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "TT Commons";
+  color: var(--white);
+}
+
+:root {
+  --main: #000;
+  --white: #fff;
+  --accent: #f51b1b;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+html {
+  background-color: var(--main);
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main {
+  display: flex;
+  gap: 32px;
+  min-height: calc(
+    100vh - 80px - 24px
+  ); /* высота экрана - внутренние отступы - высота логотипа */
+}
+
+.me {
+  width: 322px;
+  flex: 0 0 322px;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  position: relative;
+}
+
+.avatar::before {
+  content: url(img/sunglasses.svg);
+  position: absolute;
+  top: 118px;
+  left: 82px;
+  transform: rotate(3deg);
+  transform: scale(1.5);
+}
+
+.avatar__img {
+  width: 100%;
+  height: 100%;
+}
+
+.me__info {
+  flex-grow: 1;
+  background-color: var(--accent);
+  position: relative;
+  padding: 16px 24px;
+}
+
+.me__info::before {
+  content: "";
+  display: block;
+  height: 24px;
+  border-radius: 24px 24px 0px 0px;
+  background-color: var(--accent);
+  position: absolute;
+  top: -24px;
+  right: 0;
+  left: 0;
+}
+
+.me__info::after {
+  content: url(img/arrowUp.svg);
+  position: absolute;
+  top: -43px;
+  right: 0;
+  left: 0;
+}
+
+.name {
+  font-family: Redcollar;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.bio {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacts__contact {
+  text-decoration: unset;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  word-break: break-all;
+}
+
+.contacts__icon {
+  margin-right: 16px;
+}
+
+.about {
+  flex-grow: 1;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.intro {
+  max-width: 690px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.hards {
+  padding: 48px 49px 48px 27px;
+  border-left: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  flex-grow: 1;
+  position: relative;
+}
+
+.hards__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hards::before {
+  content: url(img/arrowDown.svg);
+  position: absolute;
+  top: 0;
+  left: 56px;
+}
+
+.hards__header {
+  height: 19px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  gap: 60px;
+}
+
+.hards__header::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 56px;
+  border-top: 1px solid var(--white);
+}
+
+.hards__header::after {
+  content: "";
+  display: block;
+  height: 100%;
+  flex-grow: 1;
+  border-top: 1px solid var(--white);
+}
+
+.hards__item {
+  display: flex;
+  gap: 72px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.hards__item:last-child {
+  padding-bottom: unset;
+  border-bottom: unset;
+}
+
+.hards__title {
+  width: 124px;
+  flex: 0 0 124px;
+  font-family: "Redcollar";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.info {
+  flex-grow: 1;
+}
+
+.info__title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.info__description {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  opacity: 0.4;
+}
+
+.info__date {
+  display: block;
+}
+
+.info__skills {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.info__skill {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    padding: 20px;
+  }
+
+  .header {
+    height: 22px;
+    margin-bottom: 48px;
+    justify-content: flex-start;
+  }
+
+  .main {
+    flex-wrap: wrap;
+    gap: 40px;
+    min-height: unset;
+  }
+
+  .me {
+    width: unset;
+    flex: unset;
+  }
+
+  .me__info {
+    padding: 0 16px 40px;
+  }
+
+  .me__info::before {
+    height: 20px;
+    border-radius: 20px 20px 0px 0px;
+    top: -20px;
+  }
+
+  .me__info::after {
+    transform: scale(0.9);
+    top: -38px;
+  }
+
+  .name {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 4px;
+  }
+
+  .bio {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 32px;
+  }
+
+  .contacts {
+    gap: 16px;
+  }
+
+  .contacts__contact {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .about {
+    flex-grow: unset;
+    padding-top: unset;
+    gap: 25px;
+  }
+
+  .intro {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .hards {
+    padding: 40px 15px 30px;
+    flex-grow: unset;
+  }
+
+  .hards__list {
+    gap: 24px;
+  }
+
+  .hards::before {
+    left: calc(100% / 2 - 30px);
+  }
+
+  .hards__header {
+    height: 20px;
+    position: absolute;
+    justify-content: space-between;
+  }
+
+  .hards__header::before {
+    width: unset;
+    flex-grow: 1;
+  }
+
+  .hards__item {
+    display: block;
+    padding-bottom: 24px;
+  }
+
+  .hards__title {
+    flex: unset;
+    width: unset;
+    margin-bottom: 16px;
+  }
+
+  .info__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .info__description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .info__skills {
+    gap: 16px;
+  }
+
+  .info__skill {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
