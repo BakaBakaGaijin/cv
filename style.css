@@ -68,9 +68,10 @@ body {
 
 .avatar::before {
   content: url(img/sunglasses.svg);
+  width: 45%;
   position: absolute;
-  top: 118px;
-  left: 82px;
+  top: 32%;
+  left: 25%;
   transform: rotate(3deg);
   transform: scale(1.5);
 }
