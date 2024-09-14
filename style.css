@@ -94,7 +94,7 @@ body {
   border-radius: 24px 24px 0px 0px;
   background-color: var(--accent);
   position: absolute;
-  top: -24px;
+  top: -23px;
   right: 0;
   left: 0;
 }
@@ -102,9 +102,8 @@ body {
 .me__info::after {
   content: url(img/arrowUp.svg);
   position: absolute;
-  top: -43px;
-  right: 0;
-  left: 0;
+  top: -41px;
+  left: calc(50% - 30px);
 }
 
 .name {
@@ -261,7 +260,7 @@ body {
   letter-spacing: -0.01em;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 840px) {
   body {
     padding: 20px;
   }
@@ -279,7 +278,7 @@ body {
   }
 
   .me {
-    width: unset;
+    width: 100%;
     flex: unset;
   }
 
@@ -290,12 +289,11 @@ body {
   .me__info::before {
     height: 20px;
     border-radius: 20px 20px 0px 0px;
-    top: -20px;
+    top: -19px;
   }
 
   .me__info::after {
-    transform: scale(0.9);
-    top: -38px;
+    top: -37px;
   }
 
   .name {
