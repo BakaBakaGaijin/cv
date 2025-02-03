@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "Redcollar";
+  font-family: Redcollar;
   src: url("fonts/Redcollar.woff2"), url("fonts/Redcollar.woff");
 }
 
 @font-face {
-  font-family: "TT Commons";
+  font-family: TT Commons;
   src: url("fonts/TTCommons-Regular.woff");
 }
 
 * {
   box-sizing: border-box;
-  font-family: "TT Commons";
+  font-family: TT Commons, sans-serif;
   color: var(--white);
 }
 
@@ -38,8 +38,8 @@ html {
 }
 
 body {
-  margin: 0;
   padding: 40px;
+  margin: 0;
 }
 
 .header {
@@ -50,16 +50,14 @@ body {
 .main {
   display: flex;
   gap: 32px;
-  min-height: calc(
-    100vh - 80px - 24px
-  ); /* высота экрана - внутренние отступы - высота логотипа */
+  min-height: calc(100vh - 80px - 24px); /* высота экрана - внутренние отступы - высота логотипа */
 }
 
 .me {
-  width: 322px;
-  flex: 0 0 322px;
   display: flex;
+  flex: 0 0 322px;
   flex-direction: column;
+  width: 322px;
 }
 
 .avatar {
@@ -67,12 +65,11 @@ body {
 }
 
 .avatar::before {
-  content: url(img/sunglasses.svg);
-  width: 45%;
   position: absolute;
   top: 32%;
   left: 25%;
-  transform: rotate(3deg);
+  width: 45%;
+  content: url("img/sunglasses.svg");
   transform: scale(1.5);
 }
 
@@ -82,45 +79,45 @@ body {
 }
 
 .me__info {
-  flex-grow: 1;
-  background-color: var(--accent);
   position: relative;
+  flex-grow: 1;
   padding: 16px 24px;
+  background-color: var(--accent);
 }
 
 .me__info::before {
-  content: "";
-  display: block;
-  height: 24px;
-  border-radius: 24px 24px 0px 0px;
-  background-color: var(--accent);
   position: absolute;
   top: -23px;
   right: 0;
   left: 0;
+  display: block;
+  height: 24px;
+  content: "";
+  background-color: var(--accent);
+  border-radius: 24px 24px 0px 0px;
 }
 
 .me__info::after {
-  content: url(img/arrowUp.svg);
   position: absolute;
   top: -41px;
   left: calc(50% - 30px);
+  content: url("img/arrowUp.svg");
 }
 
 .name {
-  font-family: Redcollar;
-  font-weight: 400;
+  margin-bottom: 8px;
+  font-family: Redcollar, sans-serif;
   font-size: 24px;
+  font-weight: 400;
   line-height: 28px;
   letter-spacing: -0.02em;
-  margin-bottom: 8px;
 }
 
 .bio {
+  margin-bottom: 40px;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: -0.02em;
-  margin-bottom: 40px;
 }
 
 .contacts {
@@ -130,13 +127,13 @@ body {
 }
 
 .contacts__contact {
-  text-decoration: unset;
+  display: flex;
+  align-items: center;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: -0.02em;
-  display: flex;
-  align-items: center;
   word-break: break-all;
+  text-decoration: unset;
 }
 
 .contacts__icon {
@@ -144,11 +141,11 @@ body {
 }
 
 .about {
-  flex-grow: 1;
-  padding-top: 8px;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   gap: 33px;
+  padding-top: 8px;
 }
 
 .intro {
@@ -159,12 +156,12 @@ body {
 }
 
 .hards {
+  position: relative;
+  flex-grow: 1;
   padding: 48px 49px 48px 27px;
-  border-left: 1px solid var(--white);
   border-right: 1px solid var(--white);
   border-bottom: 1px solid var(--white);
-  flex-grow: 1;
-  position: relative;
+  border-left: 1px solid var(--white);
 }
 
 .hards__list {
@@ -174,35 +171,35 @@ body {
 }
 
 .hards::before {
-  content: url(img/arrowDown.svg);
   position: absolute;
   top: 0;
   left: 56px;
+  content: url("img/arrowDown.svg");
 }
 
 .hards__header {
-  height: 19px;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   display: flex;
   gap: 60px;
+  height: 19px;
 }
 
 .hards__header::before {
-  content: "";
   display: block;
-  height: 100%;
   width: 56px;
+  height: 100%;
+  content: "";
   border-top: 1px solid var(--white);
 }
 
 .hards__header::after {
-  content: "";
   display: block;
-  height: 100%;
   flex-grow: 1;
+  height: 100%;
+  content: "";
   border-top: 1px solid var(--white);
 }
 
@@ -219,11 +216,11 @@ body {
 }
 
 .hards__title {
-  width: 124px;
   flex: 0 0 124px;
-  font-family: "Redcollar";
-  font-weight: 400;
+  width: 124px;
+  font-family: Redcollar, sans-serif;
   font-size: 16px;
+  font-weight: 400;
   line-height: 100%;
 }
 
@@ -232,8 +229,8 @@ body {
 }
 
 .info__title {
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: -0.01em;
 }
@@ -251,8 +248,8 @@ body {
 
 .info__skills {
   display: flex;
-  gap: 32px;
   flex-wrap: wrap;
+  gap: 32px;
 }
 
 .info__skill {
@@ -267,9 +264,9 @@ body {
   }
 
   .header {
+    justify-content: flex-start;
     height: 22px;
     margin-bottom: 48px;
-    justify-content: flex-start;
   }
 
   .main {
@@ -279,8 +276,8 @@ body {
   }
 
   .me {
-    width: 100%;
     flex: unset;
+    width: 100%;
   }
 
   .me__info {
@@ -288,9 +285,9 @@ body {
   }
 
   .me__info::before {
+    top: -19px;
     height: 20px;
     border-radius: 20px 20px 0px 0px;
-    top: -19px;
   }
 
   .me__info::after {
@@ -298,15 +295,15 @@ body {
   }
 
   .name {
+    margin-bottom: 4px;
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 4px;
   }
 
   .bio {
+    margin-bottom: 32px;
     font-size: 16px;
     line-height: 20px;
-    margin-bottom: 32px;
   }
 
   .contacts {
@@ -320,8 +317,8 @@ body {
 
   .about {
     flex-grow: unset;
-    padding-top: unset;
     gap: 25px;
+    padding-top: unset;
   }
 
   .intro {
@@ -330,8 +327,8 @@ body {
   }
 
   .hards {
-    padding: 40px 15px 30px;
     flex-grow: unset;
+    padding: 40px 15px 30px;
   }
 
   .hards__list {
@@ -343,14 +340,14 @@ body {
   }
 
   .hards__header {
-    height: 20px;
     position: absolute;
     justify-content: space-between;
+    height: 20px;
   }
 
   .hards__header::before {
-    width: unset;
     flex-grow: 1;
+    width: unset;
   }
 
   .hards__item {

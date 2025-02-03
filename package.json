@@ -1,0 +1,22 @@
+{
+  "name": "cv",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx stylelint \"**/*.css\"",
+    "lintfix": "npx stylelint \"**/*.css\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BakaBakaGaijin/cv.git"
+  },
+  "keywords": [
+    "cv"
+  ],
+  "author": "BakaBakaGaijin",
+  "homepage": "https://github.com/BakaBakaGaijin/cv#readme",
+  "devDependencies": {
+    "stylelint": "^16.14.1",
+    "stylelint-config-recess-order": "^6.0.0",
+    "stylelint-config-standard": "^37.0.0"
+  }
+}
